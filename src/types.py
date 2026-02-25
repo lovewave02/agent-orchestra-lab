@@ -21,6 +21,7 @@ class AgentRun:
     success: bool
     latency_ms: float
     token_cost: int
+    created_at: str = ''
 
 
 @dataclass

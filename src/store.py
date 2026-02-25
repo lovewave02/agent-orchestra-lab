@@ -49,7 +49,7 @@ def fetch_runs() -> list[AgentRun]:
     init_db()
     with sqlite3.connect(DB_PATH) as conn:
         rows = conn.execute(
-            'SELECT task_id, agent, output, success, latency_ms, token_cost FROM runs ORDER BY id ASC'
+            'SELECT task_id, agent, output, success, latency_ms, token_cost, created_at FROM runs ORDER BY id ASC'
         ).fetchall()
 
     return [
@@ -60,6 +60,7 @@ def fetch_runs() -> list[AgentRun]:
             success=bool(r[3]),
             latency_ms=float(r[4]),
             token_cost=int(r[5]),
+            created_at=str(r[6]),
         )
         for r in rows
     ]
