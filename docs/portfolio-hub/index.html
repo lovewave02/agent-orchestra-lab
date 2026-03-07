@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LOVewave Portfolio Systems</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/trend.css" />
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+    <div class="halo halo-a" aria-hidden="true"></div>
+    <div class="halo halo-b" aria-hidden="true"></div>
+
+    <main class="page-shell">
+      <header class="dock reveal">
+        <div class="brand-wrap">
+          <p class="brand">LOVewave Systems</p>
+          <p class="brand-sub">Proof-driven product portfolio</p>
+        </div>
+        <nav class="dock-links">
+          <a href="#projects">Projects</a>
+          <a href="#execution">Execution</a>
+          <a href="mailto:lovewave02@gmail.com">Contact</a>
+        </nav>
+        <span class="theme-chip" id="themeBadge">Loading Theme...</span>
+      </header>
+
+      <section class="hero reveal">
+        <div class="hero-copy">
+          <p class="eyebrow" id="heroEyebrow">Applied Product Engineering</p>
+          <h1 id="heroTitle">실행으로 증명하는<br />운영형 포트폴리오</h1>
+          <p class="lead" id="heroCopy">
+            아이디어 소개가 아니라 시스템 동작, 장애 대응, 품질 루프를 바로 확인할 수 있도록 설계했습니다.
+          </p>
+          <div class="hero-actions">
+            <a class="btn-solid" href="#projects">전체 프로젝트 보기</a>
+            <a class="btn-line" href="/viewer.html?project=gateway">보안 게이트웨이 열기</a>
+          </div>
+        </div>
+
+        <aside class="hero-panel">
+          <h2>Live Proof Panel</h2>
+          <div id="heroStats" class="hero-stats"></div>
+          <div class="pulse-line">
+            <span class="dot"></span>
+            <p id="focusLine">이번 주 집중 영역을 로드하는 중입니다.</p>
+          </div>
+        </aside>
+      </section>
+
+      <section class="marquee reveal" aria-label="core capabilities">
+        <div class="marquee-track" id="marqueeTrack"></div>
+      </section>
+
+      <section class="spotlight reveal" id="spotlight"></section>
+
+      <section class="filter-head reveal" id="projects">
+        <div>
+          <p class="eyebrow">Project Atlas</p>
+          <h2>관심 영역을 바로 탐색</h2>
+        </div>
+        <div class="control-row">
+          <label class="control search-control">
+            <span>검색</span>
+            <input id="searchInput" type="search" placeholder="프로젝트명, 훅, 키워드 검색" />
+          </label>
+          <label class="control sort-control">
+            <span>정렬</span>
+            <select id="sortSelect">
+              <option value="number">번호 순</option>
+              <option value="title">제목 순</option>
+              <option value="category">카테고리 순</option>
+            </select>
+          </label>
+          <button class="pin-toggle" id="pinOnlyToggle" type="button">Pinned only: OFF</button>
+        </div>
+        <div class="chip-row" id="filters"></div>
+        <p class="result-meta" id="resultMeta"></p>
+      </section>
+
+      <section class="project-wall" id="cards"></section>
+
+      <section class="execution reveal" id="execution">
+        <article class="execution-card">
+          <p class="eyebrow">Execution Rhythm</p>
+          <h2>운영 개선 루프</h2>
+          <ul id="readiness"></ul>
+        </article>
+        <article class="execution-card timeline">
+          <p class="eyebrow">Now Building</p>
+          <h2>이번 주 변화</h2>
+          <div id="timelineList"></div>
+        </article>
+      </section>
+
+      <footer class="contact reveal">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>협업 제안 / 프로젝트 문의</h2>
+        </div>
+        <a class="mail" href="mailto:lovewave02@gmail.com">lovewave02@gmail.com</a>
+      </footer>
+    </main>
+
+    <script src="/main.js?v=20260307b"></script>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "themeName": "Signal Aurora",
+  "heroEyebrow": "Product Systems, Daily Evolving",
+  "heroTitle": "변화하는 트래픽과 장애를\\n제품 수준에서 다룹니다.",
+  "heroCopy": "매일 실험, 점검, 개선을 반복해 운영 문제를 사용자 가치로 바꾸는 프로젝트 흐름을 보여줍니다.",
+  "defaultFilter": "reliability",
+  "focusProjectIds": ["chaos", "city"],
+  "microImprovement": "신뢰성 카테고리 우선 노출로 정책/복구 흐름 탐색 시간을 줄였습니다.",
+  "weekSlot": "W1",
+  "nextTheme": "Graphite Mint"
+}

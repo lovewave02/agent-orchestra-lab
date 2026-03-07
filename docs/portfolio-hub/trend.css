@@ -1,0 +1,15 @@
+:root {
+  --bg: #0f1022;
+  --ink: #f1f3ff;
+  --ink-muted: #b6bdd7;
+  --line: rgba(180, 154, 255, 0.3);
+  --card: rgba(28, 17, 50, 0.72);
+  --card-strong: rgba(39, 24, 70, 0.9);
+  --accent: #ff9e66;
+  --accent-2: #5ad4ff;
+  --chip: rgba(112, 147, 255, 0.2);
+  --hero-bg-a: #2c2050;
+  --hero-bg-b: #43317c;
+  --orb-a: #ff9166;
+  --orb-b: #6ccaff;
+}

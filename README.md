@@ -40,3 +40,6 @@ python3 -m src.cli --task-id demo-1 --type plan --content "Define scope. Build M
 1. Add tool-call abstraction and per-tool failure taxonomy
 2. Add benchmark dataset runner for regression tracking
 3. Add web dashboard for evaluation trend over time
+
+## Related Showcase
+- Portfolio Hub snapshot files are mirrored in `docs/portfolio-hub/` for UI iteration tracking.
