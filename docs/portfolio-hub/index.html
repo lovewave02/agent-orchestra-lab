@@ -1,17 +1,23 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LOVewave Portfolio Systems</title>
+    <title>차동운 | Java/Spring 백엔드 개발자 포트폴리오</title>
+    <meta
+      name="description"
+      content="운영 안정화, 장애 RCA, 배포 품질 개선에 강점이 있는 Java/Spring 백엔드 개발자 차동운의 입사지원용 포트폴리오. 실무 하이라이트와 상시 운영 데모를 통해 역량을 증명합니다."
+    />
+    <meta property="og:title" content="차동운 | Java/Spring 백엔드 개발자 포트폴리오" />
+    <meta
+      property="og:description"
+      content="운영 안정화, 장애 RCA, 배포 품질 개선에 강점이 있는 Java/Spring 백엔드 개발자 차동운의 입사지원용 포트폴리오. 실무 하이라이트와 상시 운영 데모를 통해 역량을 증명합니다."
+    />
+    <meta property="og:type" content="website" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/styles.css" />
-    <link rel="stylesheet" href="/trend.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css?v=20260312a" />
   </head>
   <body>
     <div class="noise" aria-hidden="true"></div>
@@ -19,96 +25,150 @@
     <div class="halo halo-b" aria-hidden="true"></div>
 
     <main class="page-shell">
-      <header class="dock reveal">
-        <div class="brand-wrap">
-          <p class="brand">LOVewave Systems</p>
-          <p class="brand-sub">Proof-driven product portfolio</p>
+      <header class="topbar reveal">
+        <div>
+          <p class="brand-label">LOVewave Proof Portfolio</p>
+          <p class="trust-line">상시 운영 데모 · HTTPS 적용 · 운영 검증형 포트폴리오</p>
         </div>
-        <nav class="dock-links">
-          <a href="#projects">Projects</a>
-          <a href="#execution">Execution</a>
-          <a href="mailto:lovewave02@gmail.com">Contact</a>
+        <nav class="top-links">
+          <a href="#core-skills">핵심 역량</a>
+          <a href="#work-highlights">실무 하이라이트</a>
+          <a href="#flagship-projects">대표 프로젝트</a>
+          <a href="#contact">연락</a>
         </nav>
-        <span class="theme-chip" id="themeBadge">Loading Theme...</span>
       </header>
 
-      <section class="hero reveal">
-        <div class="hero-copy">
-          <p class="eyebrow" id="heroEyebrow">Applied Product Engineering</p>
-          <h1 id="heroTitle">실행으로 증명하는<br />운영형 포트폴리오</h1>
-          <p class="lead" id="heroCopy">
-            아이디어 소개가 아니라 시스템 동작, 장애 대응, 품질 루프를 바로 확인할 수 있도록 설계했습니다.
-          </p>
-          <div class="hero-actions">
-            <a class="btn-solid" href="#projects">전체 프로젝트 보기</a>
-            <a class="btn-line" href="/viewer.html?project=gateway">보안 게이트웨이 열기</a>
-          </div>
+      <section class="mode-switch reveal" aria-label="지원 모드 선택">
+        <p>지원 모드</p>
+        <div class="mode-buttons" id="modeButtons"></div>
+      </section>
+
+      <section class="hero reveal" id="hero">
+        <div class="hero-main">
+          <p class="eyebrow">LOVewave Proof Portfolio</p>
+          <h1>차동운 | Java/Spring 백엔드 개발자</h1>
+          <p class="hero-subtitle" id="heroSubtitle"></p>
+          <div class="hero-copy" id="heroCopy"></div>
+          <div class="hero-actions" id="heroActions"></div>
         </div>
 
-        <aside class="hero-panel">
-          <h2>Live Proof Panel</h2>
-          <div id="heroStats" class="hero-stats"></div>
-          <div class="pulse-line">
-            <span class="dot"></span>
-            <p id="focusLine">이번 주 집중 영역을 로드하는 중입니다.</p>
+        <aside class="hero-metrics">
+          <p class="metric-title">프로젝트 운영 지표 기준</p>
+          <div class="metric-grid">
+            <article class="metric-card">
+              <p>MTTR</p>
+              <strong>120분 → 35분</strong>
+            </article>
+            <article class="metric-card">
+              <p>월 핫픽스</p>
+              <strong>6건 → 2건</strong>
+            </article>
+            <article class="metric-card">
+              <p>릴리즈 리드타임</p>
+              <strong>90분 → 40분</strong>
+            </article>
+            <article class="metric-card metric-card-wide">
+              <p>운영 역량 요약</p>
+              <strong>운영 장애 RCA / 재발 방지 / 안전한 릴리즈</strong>
+            </article>
           </div>
         </aside>
       </section>
 
-      <section class="marquee reveal" aria-label="core capabilities">
-        <div class="marquee-track" id="marqueeTrack"></div>
+      <section class="section-card reveal" id="core-skills">
+        <div class="section-head">
+          <p class="eyebrow">Core Capabilities</p>
+          <h2>핵심 역량</h2>
+        </div>
+        <div class="skill-grid">
+          <article class="info-card">
+            <h3>운영 안정화</h3>
+            <p>운영 장애 원인 분석(RCA), 재발 방지, 검증 로직/예외 처리 강화, 데이터 정합성 확보에 강점이 있습니다.</p>
+          </article>
+          <article class="info-card">
+            <h3>백엔드 / DB</h3>
+            <p>Java, Spring Framework / Spring Boot, MyBatis, REST API, Oracle / MariaDB / PostgreSQL / MySQL 기반 서버 개발 경험이 있습니다.</p>
+          </article>
+          <article class="info-card">
+            <h3>릴리즈 품질</h3>
+            <p>영향도 분석, 변경 범위 최소화, 체크리스트 기반 검증, 운영 시나리오 테스트를 통해 안전한 릴리즈를 지향합니다.</p>
+          </article>
+          <article class="info-card">
+            <h3>DevOps 협업</h3>
+            <p>Linux, AWS, Nginx, Tomcat, Jenkins, ArgoCD, GitLab, JIRA 기반 협업과 배포 프로세스 경험이 있습니다.</p>
+          </article>
+        </div>
+        <p class="section-note">※ 실무 프로젝트와 개인 상시 운영 데모를 함께 통해 검증 가능한 포트폴리오로 구성했습니다.</p>
       </section>
 
-      <section class="spotlight reveal" id="spotlight"></section>
+      <section class="section-card reveal" id="work-highlights">
+        <div class="section-head">
+          <p class="eyebrow">Work Highlights</p>
+          <h2>실무 하이라이트</h2>
+          <p>실제 업무에서 수행한 구조 개선, 운영 안정화, 배포 품질 강화 사례입니다. 민감한 세부 구현은 제외하고, 채용 관점에서 읽히는 수준으로 요약합니다.</p>
+        </div>
+        <div class="work-grid" id="workCards"></div>
+      </section>
 
-      <section class="filter-head reveal" id="projects">
+      <section class="section-card reveal" id="flagship-projects">
+        <div class="section-head">
+          <p class="eyebrow">Proof-driven Projects</p>
+          <h2>대표 프로젝트 (Proof-driven)</h2>
+          <p id="flagshipIntro">실제로 동작하는 데모와 운영 근거를 통해, 백엔드/운영/정책 제어 역량을 증명하는 프로젝트입니다.</p>
+        </div>
+        <div class="flagship-grid" id="flagshipCards"></div>
+      </section>
+
+      <section class="section-card reveal" id="ops-proof">
+        <div class="section-head">
+          <p class="eyebrow">Ops Proof</p>
+          <h2>운영/배포 증거</h2>
+          <p>개인 프로젝트라도 “돌아가는 데모” 수준이 아니라, 운영과 검증이 가능한 형태로 유지하는 데 초점을 맞췄습니다.</p>
+        </div>
+        <div class="proof-grid">
+          <article class="proof-card">
+            <h3>HTTPS / Reverse Proxy</h3>
+            <p>Reverse Proxy 계층에서 라우팅/트래픽 제어 + TLS(SSL) 적용</p>
+          </article>
+          <article class="proof-card">
+            <h3>Containerized deployment</h3>
+            <p>서비스 분리(컨테이너 단위)로 장애 영향 범위 축소</p>
+          </article>
+          <article class="proof-card">
+            <h3>Service separation</h3>
+            <p>상시 운영 상태를 유지하며 작은 변경도 운영 시나리오로 검증</p>
+          </article>
+          <article class="proof-card">
+            <h3>Logging / Audit / Data persistence</h3>
+            <p>로그/데이터를 분리해 추적성과 배포 단위를 명확히 관리</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-card reveal" id="additional-projects">
+        <div class="section-head">
+          <p class="eyebrow">Extended Projects</p>
+          <h2>추가 프로젝트</h2>
+        </div>
+        <div class="additional-list" id="additionalList"></div>
+      </section>
+
+      <footer class="section-card contact" id="contact">
         <div>
-          <p class="eyebrow">Project Atlas</p>
-          <h2>관심 영역을 바로 탐색</h2>
+          <p class="eyebrow">Contact & Resume</p>
+          <h2>차동운 | Java/Spring 백엔드 개발자</h2>
+          <p>개발경력 5년(2021.03~)</p>
+          <p>문의: <a href="mailto:lovewave02@gmail.com">lovewave02@gmail.com</a></p>
+          <p class="small">LOVewave Proof Portfolio</p>
         </div>
-        <div class="control-row">
-          <label class="control search-control">
-            <span>검색</span>
-            <input id="searchInput" type="search" placeholder="프로젝트명, 훅, 키워드 검색" />
-          </label>
-          <label class="control sort-control">
-            <span>정렬</span>
-            <select id="sortSelect">
-              <option value="number">번호 순</option>
-              <option value="title">제목 순</option>
-              <option value="category">카테고리 순</option>
-            </select>
-          </label>
-          <button class="pin-toggle" id="pinOnlyToggle" type="button">Pinned only: OFF</button>
+        <div class="contact-actions">
+          <a class="btn-solid" href="/resume">이력서 PDF</a>
+          <a class="btn-line" href="https://github.com/lovewave02" target="_blank" rel="noreferrer">GitHub</a>
+          <p id="lastUpdated" class="small"></p>
         </div>
-        <div class="chip-row" id="filters"></div>
-        <p class="result-meta" id="resultMeta"></p>
-      </section>
-
-      <section class="project-wall" id="cards"></section>
-
-      <section class="execution reveal" id="execution">
-        <article class="execution-card">
-          <p class="eyebrow">Execution Rhythm</p>
-          <h2>운영 개선 루프</h2>
-          <ul id="readiness"></ul>
-        </article>
-        <article class="execution-card timeline">
-          <p class="eyebrow">Now Building</p>
-          <h2>이번 주 변화</h2>
-          <div id="timelineList"></div>
-        </article>
-      </section>
-
-      <footer class="contact reveal">
-        <div>
-          <p class="eyebrow">Contact</p>
-          <h2>협업 제안 / 프로젝트 문의</h2>
-        </div>
-        <a class="mail" href="mailto:lovewave02@gmail.com">lovewave02@gmail.com</a>
       </footer>
     </main>
 
-    <script src="/main.js?v=20260307b"></script>
+    <script src="/main.js?v=20260312a"></script>
   </body>
 </html>

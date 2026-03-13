@@ -1,0 +1,90 @@
+﻿<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>프로젝트 상세 | 차동운 포트폴리오</title>
+    <meta name="description" content="차동운 Java/Spring 백엔드 포트폴리오 프로젝트 상세" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/project-detail.css?v=20260312a" />
+  </head>
+  <body data-project-slug="browser-onnx-ocr-lab">
+    <main class="page">
+      <a class="back-link" href="/?mode=a#flagship-projects">홈으로 돌아가기</a>
+
+      <header class="card header">
+        <p class="badge">Project Detail</p>
+        <h1 id="projectTitle">프로젝트명</h1>
+        <p id="projectOneLine" class="subtitle"></p>
+        <div class="badges" id="tagBadges"></div>
+      </header>
+
+      <section class="card section">
+        <h2>[섹션 1] 해결한 문제</h2>
+        <div id="problemBody"></div>
+      </section>
+
+      <section class="card section">
+        <h2>[섹션 2] 내가 만든 핵심</h2>
+        <ul id="coreList"></ul>
+      </section>
+
+      <section class="card section" id="architecture">
+        <h2>[섹션 3] 아키텍처</h2>
+        <p>사용자 -> Reverse Proxy -> App -> Data / Logs 흐름</p>
+        <div class="arch-wrap" id="architectureDiagram"></div>
+      </section>
+
+      <section class="card section">
+        <h2>[섹션 4] 사용 기술</h2>
+        <div class="tech-grid">
+          <article class="tech-box">
+            <h3>이 프로젝트 사용 기술</h3>
+            <p id="projectTech"></p>
+          </article>
+          <article class="tech-box">
+            <h3>업무 주력 스택 (별도)</h3>
+            <p id="coreWorkStack"></p>
+          </article>
+        </div>
+      </section>
+
+      <section class="card section">
+        <h2>[섹션 5] 운영/배포 방식</h2>
+        <ul id="opsList"></ul>
+      </section>
+
+      <section class="card section" id="screens">
+        <h2>[섹션 6] 검증 가능한 증거</h2>
+        <div class="evidence-grid">
+          <article class="evidence-item">
+            <h3>Live Demo</h3>
+            <p>상시 운영 경로를 통해 실제 동작 확인</p>
+          </article>
+          <article class="evidence-item">
+            <h3>Screenshots</h3>
+            <p>핵심 화면/흐름은 상세 링크에서 바로 확인</p>
+          </article>
+          <article class="evidence-item">
+            <h3>Architecture</h3>
+            <p>Reverse Proxy -> App -> Data/Logs 구조 명시</p>
+          </article>
+          <article class="evidence-item">
+            <h3>Last updated</h3>
+            <p id="lastUpdated"></p>
+          </article>
+        </div>
+        <div class="evidence-links" id="evidenceLinks"></div>
+      </section>
+
+      <section class="card section">
+        <h2>[섹션 7] 이 프로젝트가 증명하는 채용 역량</h2>
+        <p id="hiringProof" class="proof-line"></p>
+      </section>
+    </main>
+
+    <script src="/project-detail.js?v=20260312a"></script>
+  </body>
+</html>

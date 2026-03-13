@@ -1,0 +1,112 @@
+﻿<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>차동운 이력서 | Java/Spring 백엔드 개발자</title>
+    <meta name="description" content="차동운 Java/Spring 백엔드 개발자 이력서 요약" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --bg: #0c1119;
+        --card: rgba(18, 27, 37, 0.9);
+        --line: rgba(170, 191, 209, 0.28);
+        --ink: #edf3f9;
+        --ink-soft: #b8c6d3;
+        --accent: #62d3a5;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: 'Sora', 'IBM Plex Sans KR', sans-serif;
+        color: var(--ink);
+        background: radial-gradient(circle at 10% -20%, #1b3140, transparent 44%), var(--bg);
+      }
+      main {
+        width: min(900px, 100% - 24px);
+        margin: 16px auto 24px;
+        display: grid;
+        gap: 10px;
+      }
+      section {
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 14px;
+        background: var(--card);
+      }
+      h1, h2, p { margin: 0; }
+      h1 { font-size: clamp(1.5rem, 4vw, 2.2rem); }
+      h2 { font-size: 1.03rem; }
+      p { line-height: 1.56; color: var(--ink-soft); }
+      ul { margin: 8px 0 0; padding-left: 18px; color: #dbe8f4; line-height: 1.5; }
+      .actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+      .actions a, .actions button {
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        color: #e7f4ff;
+        text-decoration: none;
+        background: rgba(255, 255, 255, 0.03);
+        padding: 8px 11px;
+        font: inherit;
+        font-size: 0.84rem;
+        cursor: pointer;
+      }
+      .actions .primary {
+        border-color: transparent;
+        color: #0f1914;
+        font-weight: 700;
+        background: linear-gradient(130deg, var(--accent), #bbf4de);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section>
+        <h1>차동운 | Java/Spring 백엔드 개발자</h1>
+        <p>개발경력 5년(2021.03~) · 운영 안정화 · 장애 RCA · 배포 품질 개선</p>
+        <div class="actions">
+          <a class="primary" href="/">포트폴리오 홈</a>
+          <a href="mailto:lovewave02@gmail.com">이메일 문의</a>
+          <a href="https://github.com/lovewave02" target="_blank" rel="noreferrer">GitHub</a>
+          <button type="button" onclick="window.print()">이 페이지 PDF 저장</button>
+        </div>
+      </section>
+
+      <section>
+        <h2>요약</h2>
+        <p>공공/SI 환경에서 구축과 운영을 함께 경험하며, 운영 장애 원인 분석(RCA), 재발 방지 로직 설계, 영향도 분석, 운영 시나리오 검증을 기반으로 안전한 릴리즈를 지향합니다.</p>
+      </section>
+
+      <section>
+        <h2>핵심 역량</h2>
+        <ul>
+          <li>운영 장애 RCA, 재발 방지, 예외 처리 강화</li>
+          <li>Java/Spring 기반 API·DB 중심 백엔드 설계/개발</li>
+          <li>영향도 분석, 변경 범위 최소화, 체크리스트 검증</li>
+          <li>Linux, AWS, Nginx, Tomcat, Jenkins, ArgoCD, GitLab, JIRA 협업 경험</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>실무 하이라이트</h2>
+        <ul>
+          <li>LG전자 CSMS 2.0 모바일 개발 (2025.03~2025.12): 리드 개발, 구조/프로세스 재편, CI/CD 연동 대응</li>
+          <li>LG전자 다이렉트청약 2.0 리뉴얼 (2024.04~2024.06): 리드 개발, 영향도 분석, 운영 시나리오 검증 체계 수립</li>
+          <li>LG전자 다이렉트청약 SM (2023.12~2024.03): 운영 장애 RCA, 재발 방지 로직 강화, 배포 커뮤니케이션</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>운영형 포트폴리오 링크</h2>
+        <ul>
+          <li>대표 프로젝트: /#flagship-projects</li>
+          <li>실무 하이라이트: /#work-highlights</li>
+          <li>운영/배포 증거: /#ops-proof</li>
+        </ul>
+        <p>Last updated: 2026-03-12</p>
+      </section>
+    </main>
+  </body>
+</html>

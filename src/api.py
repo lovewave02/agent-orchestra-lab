@@ -1,11 +1,10 @@
-from __future__ import annotations
+﻿from __future__ import annotations
 
 from pathlib import Path
 
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from fastapi.responses import FileResponse
 from fastapi.responses import Response
-from fastapi.staticfiles import StaticFiles
 
 from .eval import evaluate_runs
 from .orchestrator import run_stub, run_task
@@ -13,8 +12,34 @@ from .store import fetch_runs
 from .types import Task
 
 app = FastAPI(title='Agent Orchestra Lab API', version='0.1.0')
-web_dir = Path(__file__).resolve().parent / 'web'
-app.mount('/static', StaticFiles(directory=web_dir), name='static')
+
+package_dir = Path(__file__).resolve().parent
+project_root = package_dir.parent
+portfolio_web_dir = project_root / 'docs' / 'portfolio-hub'
+project_pages_dir = project_root / 'docs' / 'project-pages'
+default_web_dir = package_dir / 'web'
+web_dir = portfolio_web_dir if portfolio_web_dir.exists() else default_web_dir
+
+PROJECT_PAGE_ALIASES = {
+    'city': 'city-signal-twin',
+    'city-signal-twin': 'city-signal-twin',
+    'chaos': 'edge-chaos-simulator',
+    'edge-chaos-simulator': 'edge-chaos-simulator',
+    'journal': 'incident-journal',
+    'incident-journal': 'incident-journal',
+    'local-first-incident-journal': 'incident-journal',
+    'gateway': 'mcp-gateway-guard',
+    'mcp-gateway-guard': 'mcp-gateway-guard',
+    'gateway-guard': 'mcp-gateway-guard',
+    'climate': 'climate-memory-map',
+    'climate-memory-map': 'climate-memory-map',
+    'ocr': 'browser-onnx-ocr-lab',
+    'browser-onnx-ocr-lab': 'browser-onnx-ocr-lab',
+    'rtc': 'rtc-trust-lens',
+    'rtc-trust-lens': 'rtc-trust-lens',
+    'agent': 'agent-orchestra-lab',
+    'agent-orchestra-lab': 'agent-orchestra-lab',
+}
 
 
 @app.get('/')
@@ -25,6 +50,37 @@ def index() -> FileResponse:
 @app.head('/')
 def index_head() -> Response:
     return Response(status_code=200)
+
+
+@app.get('/projects/{project_id}')
+def project_page(project_id: str) -> FileResponse:
+    slug = PROJECT_PAGE_ALIASES.get(project_id, project_id)
+    target = (project_pages_dir / f'{slug}.html').resolve()
+    if target.exists() and target.is_file() and str(target).startswith(str(project_pages_dir.resolve())):
+        return FileResponse(target)
+    raise HTTPException(status_code=404, detail='project not found')
+
+
+@app.get('/resume')
+@app.get('/resume/')
+def resume_page() -> FileResponse:
+    target = (web_dir / 'resume.html').resolve()
+    if target.exists() and target.is_file() and str(target).startswith(str(web_dir.resolve())):
+        return FileResponse(target)
+    raise HTTPException(status_code=404, detail='resume page not found')
+
+
+@app.get('/legacy-agent')
+def legacy_agent_index() -> FileResponse:
+    return FileResponse(default_web_dir / 'index.html')
+
+
+@app.get('/legacy-agent/{asset_path:path}')
+def legacy_agent_assets(asset_path: str) -> FileResponse:
+    safe_path = (default_web_dir / asset_path).resolve()
+    if safe_path.exists() and safe_path.is_file() and str(safe_path).startswith(str(default_web_dir.resolve())):
+        return FileResponse(safe_path)
+    raise HTTPException(status_code=404, detail='asset not found')
 
 
 @app.get('/health')
@@ -84,3 +140,12 @@ def run(payload: Task) -> dict:
         'output': result.last_run.output if result.last_run else None,
         'evaluation': result.evaluation.__dict__ if result.evaluation else None,
     }
+
+
+@app.get('/{asset_path:path}')
+def static_assets(asset_path: str) -> FileResponse:
+    safe_path = (web_dir / asset_path).resolve()
+    if safe_path.exists() and safe_path.is_file() and str(safe_path).startswith(str(web_dir.resolve())):
+        return FileResponse(safe_path)
+    return FileResponse(web_dir / 'index.html')
+
