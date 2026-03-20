@@ -61,7 +61,10 @@ function renderHistory(rows) {
 }
 
 async function refreshDashboard() {
-  const [statsRes, runsRes] = await Promise.all([fetch('/stats'), fetch('/runs?limit=20')]);
+  const [statsRes, runsRes] = await Promise.all([
+    fetch(`${BASE_PATH}/stats`),
+    fetch(`${BASE_PATH}/runs?limit=20`)
+  ]);
   if (!statsRes.ok || !runsRes.ok) {
     throw new Error('대시보드 로드 실패');
   }
@@ -88,7 +91,7 @@ async function runTask() {
   }
 
   try {
-    const res = await fetch('/run', {
+    const res = await fetch(`${BASE_PATH}/run`, {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify(payload)
@@ -125,3 +128,4 @@ taskIdInput.value = makeTaskId();
 refreshDashboard().catch(() => {
   statusText.textContent = '대시보드 초기 로드 실패';
 });
+const BASE_PATH = window.location.pathname.startsWith('/legacy-agent') ? '/legacy-agent' : '';

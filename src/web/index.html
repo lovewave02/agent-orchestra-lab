@@ -4,7 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Agent Orchestra Lab</title>
-    <link rel="stylesheet" href="/static/styles.css" />
+    <script>
+      (function () {
+        var base = window.location.pathname.indexOf('/legacy-agent') === 0 ? '/legacy-agent' : '';
+        var css = document.createElement('link');
+        css.rel = 'stylesheet';
+        css.href = base + '/static/styles.css';
+        document.head.appendChild(css);
+      })();
+    </script>
   </head>
   <body>
     <main class="page">
@@ -75,6 +83,14 @@
       </section>
     </main>
 
-    <script type="module" src="/static/main.js"></script>
+    <script>
+      (function () {
+        var base = window.location.pathname.indexOf('/legacy-agent') === 0 ? '/legacy-agent' : '';
+        var script = document.createElement('script');
+        script.type = 'module';
+        script.src = base + '/static/main.js';
+        document.body.appendChild(script);
+      })();
+    </script>
   </body>
 </html>

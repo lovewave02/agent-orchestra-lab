@@ -39,6 +39,9 @@ PROJECT_PAGE_ALIASES = {
     'rtc-trust-lens': 'rtc-trust-lens',
     'agent': 'agent-orchestra-lab',
     'agent-orchestra-lab': 'agent-orchestra-lab',
+    'consistency': 'order-payment-consistency-lab',
+    'order-consistency': 'order-payment-consistency-lab',
+    'order-payment-consistency-lab': 'order-payment-consistency-lab',
 }
 
 
@@ -77,7 +80,8 @@ def legacy_agent_index() -> FileResponse:
 
 @app.get('/legacy-agent/{asset_path:path}')
 def legacy_agent_assets(asset_path: str) -> FileResponse:
-    safe_path = (default_web_dir / asset_path).resolve()
+    normalized = asset_path.removeprefix('static/')
+    safe_path = (default_web_dir / normalized).resolve()
     if safe_path.exists() and safe_path.is_file() and str(safe_path).startswith(str(default_web_dir.resolve())):
         return FileResponse(safe_path)
     raise HTTPException(status_code=404, detail='asset not found')

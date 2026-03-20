@@ -138,7 +138,7 @@ const PROJECTS = {
     core: ['raw/grayscale/binary 파이프라인 비교', '지연/신뢰도 동시 측정', '브라우저 단독 실행 구조'],
     ops: ['전처리 선택 근거를 수치화', '실험 결과 비교를 반복 가능하게 유지'],
     hiringProof: '실험 자동화, 성능 측정, AI 도구 운영화',
-    demoUrl: '/browser-onnx-ocr-lab',
+    demoUrl: '/browser-onnx-ocr-lab/',
     detailUrl: '/projects/browser-onnx-ocr-lab',
     github: 'https://github.com/lovewave02/browser-onnx-ocr-lab',
   },
@@ -166,6 +166,18 @@ const PROJECTS = {
     detailUrl: '/projects/agent-orchestra-lab',
     github: 'https://github.com/lovewave02/agent-orchestra-lab',
   },
+  'order-payment-consistency-lab': {
+    slug: 'order-payment-consistency-lab',
+    name: 'Order/Payment Consistency Lab',
+    oneLine: '주문/결제 부분 실패를 Outbox + Idempotency + DLQ로 복구하는 정합성 검증 랩',
+    problem: '중복 요청, 메시지 전달 지연, 소비자 실패가 겹치면 주문/결제 정합성이 쉽게 무너진다.',
+    core: ['Transactional Outbox', 'Consumer Idempotency', 'DLQ Replay'],
+    ops: ['부분 실패를 재현 가능한 데모로 고정', '복구 경로까지 포함한 운영형 트랜잭션 패턴 시연'],
+    hiringProof: '데이터 정합성, 재처리 설계, 장애 복구 루프, 안전한 백엔드 트랜잭션 처리',
+    demoUrl: '/order-consistency',
+    detailUrl: '/projects/order-payment-consistency-lab',
+    github: 'https://github.com/lovewave02/order-payment-consistency-lab',
+  },
 };
 
 const ADDITIONAL_PROJECT_KEYS = [
@@ -174,6 +186,7 @@ const ADDITIONAL_PROJECT_KEYS = [
   'browser-onnx-ocr-lab',
   'rtc-trust-lens',
   'agent-orchestra-lab',
+  'order-payment-consistency-lab',
 ];
 
 const dom = {

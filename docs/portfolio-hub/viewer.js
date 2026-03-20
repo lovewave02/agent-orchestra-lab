@@ -7,6 +7,7 @@
   chaos: { title: 'Edge Chaos Simulator', url: '/projects/edge-chaos-simulator' },
   gateway: { title: 'MCP Gateway Guard', url: '/projects/mcp-gateway-guard' },
   agent: { title: 'Agent Orchestra Lab', url: '/projects/agent-orchestra-lab' },
+  consistency: { title: 'Order/Payment Consistency Lab', url: '/projects/order-payment-consistency-lab' },
 };
 
 const params = new URLSearchParams(window.location.search);
